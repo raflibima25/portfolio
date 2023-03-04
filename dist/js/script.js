@@ -23,3 +23,11 @@ hamburger.addEventListener("click", () => {
 	hamburger.classList.toggle("hamburger-active");
 	navMenu.classList.toggle("hidden");
 });
+
+// Klik dimanapun navMenu menutup
+window.addEventListener("click", (e) => {
+	if (e.target != hamburger && e.target != navMenu) {
+		hamburger.classList.remove("hamburger-active");
+		navMenu.classList.add("hidden");
+	}
+});
