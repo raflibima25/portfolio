@@ -37,3 +37,33 @@ document.getElementById("download-cv").addEventListener("click", () => {
 	// Menautkan file PDF dan memulai unduhan
 	window.open('dist/CV_Rafli Bima Pratandra_2024.pdf', '_blank');
 });
+
+// EmailJS
+document.getElementById("contact").addEventListener("submit", (e) => {
+	e.preventDefault();
+  
+	// ambil data dari formulir
+	const name = document.querySelector("input[name='name']").value;
+	const email = document.querySelector("input[name='email']").value;
+	const message = document.querySelector("textarea[name='message']").value;
+  
+	// Log data untuk debugging
+	console.log({ from_name: name, message: message, reply_to: email });
+  
+	// Kirim email
+	emailjs
+		.send("service_37by0fc", "template_ljklr77", {
+			from_name: name,
+			message: message,
+			reply_to: email,
+		})
+		.then(
+			(response) => {
+			alert("Pesan berhasil terkirim!");
+			},
+			(error) => {
+			console.error("Gagal mengirim pesan:", error);
+			alert("Terjadi kesalahan saat mengirim pesan!");
+			}
+		);
+});  

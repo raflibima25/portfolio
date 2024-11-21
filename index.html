@@ -4,9 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio Tailwind CSS</title>
+		<title>Bima | Web Portfolio</title>
 		<link href="dist/output.css" rel="stylesheet" />
 		<link rel="icon" href="dist/img/Logo_raflibima_circle.png" type="image/png">
+		<!-- EmailJS -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init({
+				  publicKey: "U6wtzD3Uk3dXUbUsM",
+				});
+			})();
+		</script>
 	</head>
 	<body>
 		<!-- Header Start -->
@@ -61,7 +71,7 @@
 						<p class="mb-10 font-medium leading-relaxed text-secondary">Seorang profesional yang ingin menjadi seorang Fullstack Web Developer. Saya bertekad untuk terus belajar dan mengasah kemampuan saya dalam pengembangan web agar dapat membuat website yang responsif dan menarik.. <span class="font-semibold text-dark">bukan!</span></p>
 
 						<a href="#contact" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
-						
+
 						<a href="dist/CV_Rafli Bima Pratandra_2024.pdf" id="download-cv" target="_blank" class="rounded-full bg-slate-800 py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Download CV</a>
 					</div>
 
@@ -302,15 +312,15 @@
 					<div class="mx-auto w-full lg:w-2/3">
 						<div class="mb-8 w-full px-4">
 							<label for="name" class="text-base font-bold text-primary">Nama</label>
-							<input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+							<input type="text" id="name" name="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
 						</div>
 						<div class="mb-8 w-full px-4">
 							<label for="email" class="text-base font-bold text-primary">Email</label>
-							<input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+							<input type="email" id="email" name='email' class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
 						</div>
 						<div class="mb-8 w-full px-4">
 							<label for="message" class="text-base font-bold text-primary">Pesan</label>
-							<textarea id="message" class="h-32 w-full resize-none rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+							<textarea id="message" name="message" class="h-32 w-full resize-none rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
 						</div>
 						<div class="mb-8 w-full px-4">
 							<button class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg">Kirim</button>
@@ -437,6 +447,7 @@
 		</a>
 		<!-- Back to top End -->
 
+		<!-- js custom -->
 		<script src="dist/js/script.js"></script>
 		<!-- jsPDF -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
