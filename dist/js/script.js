@@ -31,3 +31,9 @@ window.addEventListener("click", (e) => {
 		navMenu.classList.add("hidden");
 	}
 });
+
+// Download CV
+document.getElementById("download-cv").addEventListener("click", () => {
+	// Menautkan file PDF dan memulai unduhan
+	window.open('dist/CV_Rafli Bima Pratandra_2024.pdf', '_blank');
+});
