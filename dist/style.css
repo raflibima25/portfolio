@@ -1,0 +1,11 @@
+.skill-card {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid silver;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, .3);
+}
